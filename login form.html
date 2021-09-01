@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Vignesh store login</title>
+      <link rel="stylesheet" href="login form.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <script>
+function myFunction()
+{
+   var un = document.forms["myform"]["un"].value;
+   var pass= document.forms["myform"]["pass"].value;
+   if (un=="VIGNESH M" && pass=="1234")
+   {
+     window.location.href= "hi.html";
+   }
+   else
+   {
+      alert("Invalid Username and Password");
+   }
+}
+</script>
+   <body>
+      <div class="container">
+         <header>Login Form</header>
+         <form name="myform">
+            <div class="input-field">
+               <input type="text" name="un" required >
+               <label>Email or Username</label>
+            </div>
+            <div class="input-field">
+               <input class="pswrd" type="password" name="pass" required >
+               <span class="show">SHOW</span>
+               <label>Password</label>
+            </div>
+           <div class="button" onclick="myFunction()" name="log" id="logButton" value="login">
+              <div class="inner"></div>
+         <button >LOGIN</button>
+            </div>
+         </form>
+         <div class="auth">
+            Or login with
+         </div>
+         <div class="links">
+            <div class="facebook">
+              <a href="a.html"> <i class="fab fa-facebook-square"><span>Facebook</span></i></a>
+            </div>
+            <div class="google">
+             <a href="b.html">  <i class="fab fa-google-plus-square"><span>Google</span></i></a>
+            </div>
+         </div>
+         <div class="signup">
+            Not a member? <a href="#">Signup now</a>
+         </div>
+      </div>
+      <script>
+         var input = document.querySelector('.pswrd');
+         var show = document.querySelector('.show');
+         show.addEventListener('click', active);
+         function active(){
+           if(input.type === "password"){
+             input.type = "text";
+             show.style.color = "#1DA1F2";
+             show.textContent = "HIDE";
+           }else{
+             input.type = "password";
+             show.textContent = "SHOW";
+             show.style.color = "#111";
+           }
+         }
+      </script>
+   </body>
+</html>
